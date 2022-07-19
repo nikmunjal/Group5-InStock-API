@@ -22,4 +22,15 @@ router.get('/:id', (req, res) => {
     };
 })
 
+
+//      DELETE SINGLE INVENTORY ITEM
+//  pseudocode:  selected id should match and be deleted , does NOT display details 
+router.delete('/:id', (req,res) => {
+    const {id} = req.params;
+    const itemAddress = inventoryData.find (( {id:itemId} ) => id ===itemId );
+
+    if ({id} )
+})
+
+
 module.exports = router;
