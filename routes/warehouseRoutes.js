@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
     else res.status(404).send("That warehouse was not found");
 });
 
-// grabbing the inventories of warehouses
+// grabbing the inventories of warehouses by their id 
 
 router.get("/:id/inventory", (req, res) => {
             const findInv = inventoryData.find((inv) => inv.warehouseID === req.params.id);
