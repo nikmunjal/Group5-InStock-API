@@ -48,7 +48,7 @@ router.delete("/:id", (req, res) => {
     res.status(201).json(warehouse).send("The Warehouse has been deleted");
 });
 
-// grabbing the inventories of warehouses by their id 
+// grabbing the inventories of warehouses by their id
 
 router.get("/:id/inventory", (req, res) => {
     const findInv = inventoryData.find(
@@ -120,6 +120,75 @@ router.post("/", (req, res) => {
                 res.status(201)
                     .json(warehouseData)
                     .send("The Warehouse has been Uploaded");
+            } else {
+                res.status(404).json({
+                    errorDetails: "All fields are required",
+                });
+            }
+        } else {
+            res.status(404).json({
+                errorDetails: "warehouse data was not found",
+            });
+        }
+    } catch (error) {
+        console.log("Error: 500");
+    }
+});
+
+// To Edit a Warehouse
+router.put("/:id", (req, res) => {
+    try {
+        const id = req.params.id;
+        if (warehouseData) {
+            const {
+                name,
+                address,
+                city,
+                country,
+                contactName,
+                position,
+                phone,
+                email,
+            } = req.body;
+
+            if (
+                name ||
+                address ||
+                city ||
+                country ||
+                contactName ||
+                position ||
+                isValidPhoneNumber(phone) ||
+                isValidateEmail(email)
+            ) {
+                let warehouse = warehouseData.filter(
+                    (warehouse) => warehouse.id === id
+                );
+                let warehouses = warehouseData.filter(
+                    (warehouse) => warehouse.id !== id
+                );
+
+                warehouse = {
+                    id: id,
+                    name: name,
+                    address: address,
+                    city: city,
+                    country: country,
+                    contact: {
+                        name: contactName,
+                        position: position,
+                        phone: phone,
+                        email: email,
+                    },
+                };
+                warehouses.push(warehouse);
+                fs.writeFileSync(
+                    "data/warehouses.json",
+                    JSON.stringify(warehouses)
+                );
+                res.status(201)
+                    .json(warehouses)
+                    .send("The Warehouse has been updated");
             } else {
                 res.status(404).json({
                     errorDetails: "All fields are required",
