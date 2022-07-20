@@ -33,7 +33,7 @@ router.delete("/:id", (req, res) => {
     res.status(201).json(warehouse).send("The Warehouse has been deleted");
 });
 
-// grabbing the inventories of warehouses
+// grabbing the inventories of warehouses by their id 
 
 router.get("/:id/inventory", (req, res) => {
             const findInv = inventoryData.find((inv) => inv.warehouseID === req.params.id);
