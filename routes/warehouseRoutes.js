@@ -14,8 +14,8 @@ router.delete("/:id", (req, res) => {
     const {
         params: { id },
     } = req;
-    warehouse = warehouseData.filter((warehouse) => warehouse.id !== id);
-    inventory = inventoryData.filter(
+    const warehouse = warehouseData.filter((warehouse) => warehouse.id !== id);
+    const inventory = inventoryData.filter(
         (warehouseInventory) => warehouseInventory.warehouseID !== id
     );
     fs.writeFileSync("data/warehouses.json", JSON.stringify(warehouse));

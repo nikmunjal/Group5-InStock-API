@@ -1,31 +1,5 @@
 [
     {
-        "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
-        "name": "Washington",
-        "address": "33 Pearl Street SW",
-        "city": "Washington",
-        "country": "USA",
-        "contact": {
-            "name": "Greame Lyon",
-            "position": "Warehouse Manager",
-            "phone": "+1 (646) 123-1234",
-            "email": "glyon@instock.com"
-        }
-    },
-    {
-        "id": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
-        "name": "Jersey",
-        "address": "300 Main Street",
-        "city": "New Jersey",
-        "country": "USA",
-        "contact": {
-            "name": "Brad MacDonald",
-            "position": "Warehouse Manager",
-            "phone": "+1 (646) 123-1234",
-            "email": "bmcdonald@instock.com"
-        }
-    },
-    {
         "id": "bfc9bea7-66f1-44e9-879b-4d363a888eb4",
         "name": "San Fran",
         "address": "890 Brannnan Street",
@@ -139,6 +113,45 @@
             "name": "Parmin Aujla",
             "position": "Warehouse Manager",
             "phone": "+1 646 123-1234",
+            "email": "paujla@instock.com"
+        }
+    },
+    {
+        "id": "353f0f0b-62fa-4e22-9703-47c359f36258",
+        "name": "David",
+        "address": "LA",
+        "city": "Cali",
+        "country": "USA",
+        "contact": {
+            "name": "Parmin Aujla",
+            "position": "Warehouse Manager",
+            "phone": "+1 (646) 123-1234",
+            "email": "paujla@instock.com"
+        }
+    },
+    {
+        "id": "867be81c-c651-4bf1-afb0-bb98a56dedbc",
+        "name": "Nik",
+        "address": "LA",
+        "city": "Cali",
+        "country": "USA",
+        "contact": {
+            "name": "Parmin Aujla",
+            "position": "Warehouse Manager",
+            "phone": "+1 (646) 123-1234",
+            "email": "paujla@instock.com"
+        }
+    },
+    {
+        "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+        "name": "Nik",
+        "address": "LA",
+        "city": "Cali",
+        "country": "USA",
+        "contact": {
+            "name": "Parmin Aujla",
+            "position": "Warehouse Manager",
+            "phone": "+1 (646) 123-1234",
             "email": "paujla@instock.com"
         }
     }

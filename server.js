@@ -6,7 +6,7 @@ const inventoryRouter = require("./routes/inventoryRoutes");
 const warehouseRouter = require("./routes/warehouseRoutes");
 app.use(express.static("public"));
 app.use(cors());
-// app.use(express.json());
+app.use(express.json());
 
 app.use("/inventory", inventoryRouter);
 app.use("/warehouse", warehouseRouter);
