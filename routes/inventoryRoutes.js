@@ -14,12 +14,12 @@ res.status(200).send(inventoryData)
 router.get('/:id', (req, res) => {
     const {id} = req.params;
     const itemDetails = inventoryData.find (( {id:itemId} ) => id === itemId );
-    
+
     if (typeof(itemDetails) === "undefined") {
         return res.status(404).send("Inventory item not found");
     } else {
         return res.json(itemDetails);
     };
-})
+});
 
 module.exports = router;
