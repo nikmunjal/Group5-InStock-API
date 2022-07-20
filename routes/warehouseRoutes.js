@@ -9,6 +9,16 @@ const e = require("express");
 
 router.get("/", (req, res) => res.status(200).send(warehouseData));
 
+// retrieving data from single warhouse 
+
+router.get('/:id', (req, res) => {
+    let warehouse = warehouseData.find((warehouse) => {
+        return warehouse.id === req.params.id;
+    });
+
+    if(warehouse) res.json(warehouse);
+    else res.status(404).send("That warehouse was not found");
+});
 //To delete a specific warehouse
 router.delete("/:id", (req, res) => {
     const {
