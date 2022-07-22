@@ -67,4 +67,16 @@ router.post("/", (req, res) => {
         })
 });
 
+
+//      DELETE SINGLE INVENTORY ITEM
+router.delete('/:id', (req,res) => {
+    const {id} = req.params;
+
+    const deleteItem = inventoryData.filter(( {id:itemId} ) => id !== itemId );
+    
+    return res.status(201).json(deleteItem);
+
+})
+
+
 module.exports = router;
