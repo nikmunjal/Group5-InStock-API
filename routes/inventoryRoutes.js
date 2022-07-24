@@ -6,6 +6,8 @@ router.use(express.json());
 const inventoryData = require( '../data/inventories.json' );
 const warehouseData = require( '../data/warehouses.json' );
 
+
+//      GET INVENTORY DATA
 router.get('/',(req, res) =>
 res.status(200).send(inventoryData)
 );
@@ -22,6 +24,66 @@ router.get('/:id', (req, res) => {
     };
 }
 );
+
+//      PUT, PATCH, EDIT INVENTORY ITEM
+router.put('/:id', (req, res) => {
+    try {
+        const id = req.params.id;
+        if (inventoryData) {
+            const {
+                itemName,
+                description,
+                category,
+                status,
+                warehouseName
+            } = req.body;
+
+            if (
+                itemName ||
+                description ||
+                category ||
+                status ||
+                warehouseName
+            ) {
+                let inventory = inventoryData.filter(
+                    (inventory) => inventory.id === id
+                );
+                let inventories = inventoryData.filter(
+                    (inventory) => inventory.id !== id
+                );
+
+                inventory = {
+                    itemName: itemName,
+                    description: description,
+                    category: category,
+                    status: status,
+                    warehouseName: warehouseName
+                };
+                inventories.push(inventory);
+                fs.writeFileSync(
+                    "data/inventories.json",
+                    JSON.stringify(inventory)
+                );
+                res.status(201)
+                    .json(inventory)
+                    .send("Inventory has been updated");
+            } else {
+                res.status(404).json({
+                    errorDetails: "All fields are required",
+                });
+            }
+        } else {
+            res.status(404).json({
+                errorDetails: "Inventory data was not found",
+            });
+        }
+    } catch (error) {
+        console.log("Error: 500");
+    }
+});
+
+
+
 
 // Add a new inventory item to a certain warehouse
 router.post("/", (req, res) => {
@@ -76,7 +138,7 @@ router.delete('/:id', (req,res) => {
     const {id} = req.params;
 
     const deleteItem = inventoryData.filter(( {id:itemId} ) => id !== itemId );
-    
+    fs.writeFileSync("./data/inventories.json", JSON.stringify(deleteItem));
     return res.status(201).json(deleteItem);
 
 })
