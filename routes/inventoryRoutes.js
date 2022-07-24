@@ -138,7 +138,7 @@ router.delete('/:id', (req,res) => {
     const {id} = req.params;
 
     const deleteItem = inventoryData.filter(( {id:itemId} ) => id !== itemId );
-    
+    fs.writeFileSync("./data/inventories.json", JSON.stringify(deleteItem));
     return res.status(201).json(deleteItem);
 
 })
