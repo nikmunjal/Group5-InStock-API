@@ -35,7 +35,8 @@ router.put('/:id', (req, res) => {
                 description,
                 category,
                 status,
-                warehouseName
+                warehouseName,
+                warehouseID
             } = req.body;
 
             if (
@@ -43,7 +44,7 @@ router.put('/:id', (req, res) => {
                 description ||
                 category ||
                 status ||
-                warehouseName
+                warehouseName 
             ) {
                 let inventory = inventoryData.filter(
                     (inventory) => inventory.id === id
@@ -57,15 +58,16 @@ router.put('/:id', (req, res) => {
                     description: description,
                     category: category,
                     status: status,
-                    warehouseName: warehouseName
+                    warehouseName: warehouseName,
+                    warehouseID: warehouseID
                 };
                 inventories.push(inventory);
                 fs.writeFileSync(
                     "data/inventories.json",
-                    JSON.stringify(inventory)
+                    JSON.stringify(inventories)
                 );
                 res.status(201)
-                    .json(inventory)
+                    .json(inventories)
                     .send("Inventory has been updated");
             } else {
                 res.status(404).json({
