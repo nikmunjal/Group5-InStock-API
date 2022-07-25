@@ -35,7 +35,7 @@ router.put('/:id', (req, res) => {
                 description,
                 category,
                 status,
-                warehouseName
+                warehouseName,
             } = req.body;
 
             if (
@@ -62,10 +62,10 @@ router.put('/:id', (req, res) => {
                 inventories.push(inventory);
                 fs.writeFileSync(
                     "data/inventories.json",
-                    JSON.stringify(inventory)
+                    JSON.stringify(inventories)
                 );
                 res.status(201)
-                    .json(inventory)
+                    .json(inventories)
                     .send("Inventory has been updated");
             } else {
                 res.status(404).json({
