@@ -36,6 +36,7 @@ router.put('/:id', (req, res) => {
                 category,
                 status,
                 warehouseName,
+                warehouseID
             } = req.body;
 
             if (
@@ -43,7 +44,7 @@ router.put('/:id', (req, res) => {
                 description ||
                 category ||
                 status ||
-                warehouseName
+                warehouseName 
             ) {
                 let inventory = inventoryData.filter(
                     (inventory) => inventory.id === id
@@ -57,7 +58,8 @@ router.put('/:id', (req, res) => {
                     description: description,
                     category: category,
                     status: status,
-                    warehouseName: warehouseName
+                    warehouseName: warehouseName,
+                    warehouseID: warehouseID
                 };
                 inventories.push(inventory);
                 fs.writeFileSync(
