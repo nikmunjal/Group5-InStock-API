@@ -26,63 +26,56 @@ router.get('/:id', (req, res) => {
 );
 
 //      PUT, PATCH, EDIT INVENTORY ITEM
-router.put('/:id', (req, res) => {
-    try {
+router.put('/inventory/edit/:id', (req, res) => {
         const id = req.params.id;
-        if (inventoryData) {
-            const {
-                itemName,
-                description,
-                category,
-                status,
-                warehouseName,
-                warehouseID
-            } = req.body;
 
-            if (
-                itemName ||
-                description ||
-                category ||
-                status ||
-                warehouseName 
-            ) {
-                let inventory = inventoryData.filter(
-                    (inventory) => inventory.id === id
-                );
-                let inventories = inventoryData.filter(
-                    (inventory) => inventory.id !== id
-                );
+        const selectedInventory = inventoryData.find((inventory) => {
+            inventory.id === id
+        });
+        
+        const { itemName, warehouseName, description, category, status, quantity } = req.body;
 
-                inventory = {
-                    itemName: itemName,
-                    description: description,
-                    category: category,
-                    status: status,
-                    warehouseName: warehouseName,
-                    warehouseID: warehouseID
-                };
-                inventories.push(inventory);
-                fs.writeFileSync(
-                    "data/inventories.json",
-                    JSON.stringify(inventories)
-                );
-                res.status(201)
-                    .json(inventories)
-                    .send("Inventory has been updated");
-            } else {
-                res.status(404).json({
-                    errorDetails: "All fields are required",
-                });
-            }
-        } else {
-            res.status(404).json({
-                errorDetails: "Inventory data was not found",
-            });
+        const itemNameValidity = itemName.length > 0;
+        const warehousenNameValidity = warehouseName.length > 0;
+        const descriptionValidity = description.length > 0;
+        const categoryValidity = category.length > 0;
+        const statusValidity = status.length > 0
+
+        if (
+            !itemNameValidity ||
+            !warehousenNameValidity ||
+            !descriptionValidity ||
+            !categoryValidity ||
+            !statusValidity
+        ) {
+            res.status(400).send("One or more input fields is missing or invalid")
         }
-    } catch (error) {
-        console.log("Error: 500");
-    }
+
+        selectedInventory.itemName = itemName;
+        selectedInventory.warehouseName = warehouseName;
+        selectedInventory.description = description;
+        selectedInventory.category = category;
+        selectedInventory.status = status; 
+        selectedInventory.quantity = quantity;
+
+        inventoryData.map((invArr) => {
+            if (invArr.id === selectedInventory.id) {
+                return(invArr = selectedInventory);
+            }
+        });
+
+        fs.writeFile(
+            "./data/inventories.json",
+            JSON.stringify(inventoryData),
+            (err) => {
+                if (err) {
+                    res.status(500).send(err);
+                }
+                console.log("File Edited Successfully")
+                res.status(201).json(inventoryData);
+            })
 });
+
 
 
 
