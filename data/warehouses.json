@@ -1,1 +1,106 @@
-[{"id":"bfc9bea7-66f1-44e9-879b-4d363a888eb4","name":"San Fran","address":"890 Brannnan Street","city":"San Francisco","country":"USA","contact":{"name":"Gary Wong","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"gwong@instock.com"}},{"id":"89898957-04ba-4bd0-9f5c-a7aea7447963","name":"Santa Monica","address":"520 Broadway","city":"Santa Monica","country":"USA","contact":{"name":"Sharon Ng","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"sng@instock.com"}},{"id":"ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7","name":"Seattle","address":"1201 Third Avenue","city":"Seattle","country":"USA","contact":{"name":"Daniel Bachu","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"dbachu@instock.com"}},{"id":"bb1491eb-30e6-4728-a5fa-72f89feaf622","name":"Miami","address":"2650 NW 5th Avenue","city":"Miami","country":"USA","contact":{"name":"Alana Thomas","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"athomas@instock.com"}},{"id":"150a36cf-f38e-4f59-8e31-39974207372d","name":"Boston","address":"215 Essex Street","city":"Boston","country":"USA","contact":{"name":"Vanessa Mendoza","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"vmendoza@instock.com"}},{"id":"b08c5158-10b5-49fd-a630-9957a264d4e0","name":"Andrew","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 646-123-1234","email":"paujla@instock.com"}},{"id":"e00b5f40-5edd-442f-b998-5c8ec1cc70dd","name":"Nik","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 646 123-1234","email":"paujla@instock.com"}},{"id":"cbfe2b1c-bd11-4c89-949e-5d1e7d5af405","name":"Nik","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 646 123-1234","email":"paujla@instock.com"}},{"id":"c8c69c22-7d11-49c5-853e-0fc9e84df33b","name":"Mark","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 646 123-1234","email":"paujla@instock.com"}},{"id":"353f0f0b-62fa-4e22-9703-47c359f36258","name":"David","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"867be81c-c651-4bf1-afb0-bb98a56dedbc","name":"Nik","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"5bf7bd6c-2b16-4129-bddc-9d37ff8539e9","name":"Nik","address":"LA","city":"Cali","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"a145018a-fa6d-44c3-8752-ec070d6e5b21","name":"Mark","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"daa566ad-f637-4043-b215-81264a1e6db9","name":"Dave","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"bd5219ff-fc00-42d0-b15f-3a086d003025","name":"Mark","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"e8a7fa5a-6326-4a71-ad5c-f3bf464e955f","name":"Andrew","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"175114d2-e77a-4ddf-8ec8-16ccfc7dfc79","name":"Niko","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"71fe64ce-4c78-46a1-859c-9fb6f2e8943e","name":"Tom","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"ab73de08-33c3-4f98-ba1a-3d830317adca","name":"John","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"367b6595-c572-47cb-99c2-a91fd8f0d395","name":"Mary","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"2ab2d16a-a5e4-4416-86b2-10a879ef4bd5","name":"Jane","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"01c53bed-ab77-41b4-9e55-e21dc020f0fc","name":"John","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"fb1f1def-5aca-48dc-bc37-5d7c3241b093","name":"Mary","address":"NY","city":"NY","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"2922c286-16cd-4d43-ab98-c79f698aeab0","name":"o","address":"503 o","city":"New o","country":"o","contact":{"name":"0 Aujla","position":"Warehouse 0","phone":"+1 (046) 123-1234","email":"pauola@instock.com"}}]
+[
+  {
+    "id": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+    "name": "Manhattan",
+    "address": "503 Broadway",
+    "city": "New York",
+    "country": "USA",
+    "contact": {
+      "name": "Parmin Aujla",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "paujla@instock.com"
+    }
+  },
+  {
+    "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+    "name": "Washington",
+    "address": "33 Pearl Street SW",
+    "city": "Washington",
+    "country": "USA",
+    "contact": {
+      "name": "Greame Lyon",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "glyon@instock.com"
+    }
+  },
+  {
+    "id": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
+    "name": "Jersey",
+    "address": "300 Main Street",
+    "city": "New Jersey",
+    "country": "USA",
+    "contact": {
+      "name": "Brad MacDonald",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "bmcdonald@instock.com"
+    }
+  },
+  {
+    "id": "bfc9bea7-66f1-44e9-879b-4d363a888eb4",
+    "name": "San Fran",
+    "address": "890 Brannnan Street",
+    "city": "San Francisco",
+    "country": "USA",
+    "contact": {
+      "name": "Gary Wong",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "gwong@instock.com"
+    }
+  },
+  {
+    "id": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+    "name": "Santa Monica",
+    "address": "520 Broadway",
+    "city": "Santa Monica",
+    "country": "USA",
+    "contact": {
+      "name": "Sharon Ng",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "sng@instock.com"
+    }
+  },
+  {
+    "id": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7",
+    "name": "Seattle",
+    "address": "1201 Third Avenue",
+    "city": "Seattle",
+    "country": "USA",
+    "contact": {
+      "name": "Daniel Bachu",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "dbachu@instock.com"
+    }
+  },
+  {
+    "id": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+    "name": "Miami",
+    "address": "2650 NW 5th Avenue",
+    "city": "Miami",
+    "country": "USA",
+    "contact": {
+      "name": "Alana Thomas",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "athomas@instock.com"
+    }
+  },
+  {
+    "id": "150a36cf-f38e-4f59-8e31-39974207372d",
+    "name": "Boston",
+    "address": "215 Essex Street",
+    "city": "Boston",
+    "country": "USA",
+    "contact": {
+      "name": "Vanessa Mendoza",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "vmendoza@instock.com"
+    }
+  }
+]
