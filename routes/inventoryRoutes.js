@@ -51,13 +51,6 @@ router.put('/edit/:id', (req, res) => {
             res.status(400).send("One or more input fields is missing or invalid")
         }
 
-        // selectedInventory.itemName = itemName;
-        // selectedInventory.warehouseName = warehouseName;
-        // selectedInventory.description = description;
-        // selectedInventory.category = category;
-        // selectedInventory.status = status;
-        // selectedInventory.quantity = quantity;
-
         selectedInventory = {
 
             warehouseName:warehouseName,
@@ -75,7 +68,7 @@ router.put('/edit/:id', (req, res) => {
                 return(invArr = selectedInventory);
             }
         });
-
+        inventoryData.push(selectedInventory);
         fs.writeFile(
             "./data/inventories.json",
             JSON.stringify(inventoryData),
