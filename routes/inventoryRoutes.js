@@ -26,14 +26,14 @@ router.get('/:id', (req, res) => {
 );
 
 //      PUT, PATCH, EDIT INVENTORY ITEM
-router.put('/inventory/edit/:id', (req, res) => {
+router.put('/edit/:id', (req, res) => {
         const id = req.params.id;
 
-        const selectedInventory = inventoryData.find((inventory) => {
+        let selectedInventory = inventoryData.find((inventory) => {
             inventory.id === id
         });
-        
-        const { itemName, warehouseName, description, category, status, quantity } = req.body;
+
+        const {itemName, warehouseName, description, category, status, quantity } = req.body;
 
         const itemNameValidity = itemName.length > 0;
         const warehousenNameValidity = warehouseName.length > 0;
@@ -51,12 +51,24 @@ router.put('/inventory/edit/:id', (req, res) => {
             res.status(400).send("One or more input fields is missing or invalid")
         }
 
-        selectedInventory.itemName = itemName;
-        selectedInventory.warehouseName = warehouseName;
-        selectedInventory.description = description;
-        selectedInventory.category = category;
-        selectedInventory.status = status; 
-        selectedInventory.quantity = quantity;
+        // selectedInventory.itemName = itemName;
+        // selectedInventory.warehouseName = warehouseName;
+        // selectedInventory.description = description;
+        // selectedInventory.category = category;
+        // selectedInventory.status = status;
+        // selectedInventory.quantity = quantity;
+
+        selectedInventory = {
+
+            warehouseName:warehouseName,
+            itemName:itemName,
+            description:description,
+            category:category,
+            status:status,
+            quantity:quantity,
+        };
+
+        console.log(selectedInventory);
 
         inventoryData.map((invArr) => {
             if (invArr.id === selectedInventory.id) {
